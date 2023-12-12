@@ -1,6 +1,9 @@
 import styles from "./page.module.scss";
+import { getPosts } from "@/utils";
 
 export default async function Home() {
+  const posts = await getPosts();
+
   return (
     <main className={`main-content ${styles.home}`}>
       <section>
@@ -53,12 +56,32 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      <section>
+      <section id="work">
         <div className="container">
           <h2>Recent Work</h2>
+
+          {posts.map((post) => (
+            // <a href={`/post/${post.slug}`} key={post.id}>
+            <a href="#">
+              <div className="project-card">
+                <div className="project-card-preview"></div>
+                <img src={post.image} alt="" />
+                <div className="project-card__desc">
+                  <h3>{post.title}</h3>
+                  <p>{post.description}</p>
+                  {/* <p>{new Date(post.createdAt).toLocaleDateString()}</p> */}
+                </div>
+              </div>
+            </a>
+          ))}
+
           <div className="project-card">
             <div className="project-card-preview">
               <img src=""></img>
+              <div className="project-card__desc">
+                <h3>Project name</h3>
+                <p>Project description</p>
+              </div>
             </div>
           </div>
         </div>
