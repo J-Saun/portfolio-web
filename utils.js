@@ -22,3 +22,25 @@ export async function getPosts() {
 
   return response;
 }
+
+export async function getPostData(slug) {
+  const client = createClient(clientConfig);
+
+  // Log the slug parameter
+  console.log("Slug:", slug);
+
+  const response = await client.fetch(
+    groq`*[_type == "post" && slug.current == $slug][0]{ 
+        _createdAt,
+        title,
+        'image': mainImage.asset->url,
+        'slug': slug.current,
+        "content": body[].children[].text
+    }`,
+    { slug }
+  );
+  // Log the response from the Sanity client
+  console.log("Response:", response);
+
+  return response;
+}

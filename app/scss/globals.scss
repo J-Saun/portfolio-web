@@ -15,6 +15,9 @@ body {
   width: min(60rem, 100% - 4rem);
   margin-inline: auto;
   min-height: 100vh;
+  background: url(../../public/mark-konig-underconstruction.jpg) no-repeat
+    center center fixed;
+  background-size: cover;
 }
 img {
   max-width: 100%;
