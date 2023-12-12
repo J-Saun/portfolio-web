@@ -1,5 +1,5 @@
 import styles from "./about.module.scss";
 
 export default function About() {
-  return <section>About Page</section>;
+  return <section className={styles.about}>About Page</section>;
 }
