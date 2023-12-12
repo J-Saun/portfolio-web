@@ -1,23 +1,22 @@
 * {
   box-sizing: border-box;
 }
-:root {
-  // background-color: white;
-  // color: $green-950;
+// :root {
+//   // background-color: white;
+//   // color: $green-950;
 
-  &.dark {
-    // background-color: $green-950;
-    // color: $orangered-100;
-  }
-}
+//   &.dark {
+//     // background-color: $green-950;
+//     // color: $orangered-100;
+//   }
+// }
 body {
   margin: 0;
   width: min(60rem, 100% - 4rem);
   margin-inline: auto;
   min-height: 100vh;
-  background: url(../../public/mark-konig-underconstruction.jpg) no-repeat
-    center center fixed;
-  background-size: cover;
+  //   center center fixed;
+  // background-size: cover;
 }
 img {
   max-width: 100%;

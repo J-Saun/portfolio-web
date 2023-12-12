@@ -7,21 +7,29 @@ import Navbar from "./components/navbar/Navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Portfolio",
-  description: "Building Beautiful Functionality",
+  title: "FN | Portfolio",
+  // description: "Building Beautiful Functionality",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <a href="/">Skip To Main Content</a>
         <header>
-          <div>
-            <p>My Portfolio</p>
-            <p>{metadata.description}</p>
+          <div className="container">
+            <a href="/">
+              <abbr title="Full Name">FN</abbr>
+              <span className="sr-only">Portfolio Home Page</span>
+            </a>
+            <div>
+              <p>My Portfolio</p>
+              <p>{metadata.description}</p>
+            </div>
+            <Navbar />
           </div>
-          <Navbar />
         </header>
+
         {children}
       </body>
     </html>
