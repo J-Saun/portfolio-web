@@ -1,7 +1,8 @@
 import { Inter } from "next/font/google";
+import "./scss/globals.scss";
 import "./scss/__index.scss";
 import "normalize.css/normalize.css";
-import Link from "next/link";
+import Navbar from "./components/navbar/Navbar";
 import { CounterProvider } from "./components/zLearning/ServerClient/CounterContext";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,11 +21,7 @@ export default function RootLayout({ children }) {
             <p>My Portfolio</p>
             <p>{metadata.description}</p>
           </div>
-          <nav>
-            <Link href="/">Home</Link>
-            <Link href="/about">About</Link>
-            <Link href="/projects">Projects</Link>
-          </nav>
+          <Navbar />
         </header>
         <CounterProvider>{children}</CounterProvider>;
         {/* <ThemeProvider>{children}</ThemeProvider> */}
