@@ -81,11 +81,39 @@ export default async function Home() {
               <div className="project-card__desc">
                 <h3>Project name</h3>
                 <p>Project description</p>
+                <h4 className="sr-only">Tech Stack</h4>
+                <ul className="badge-list badge-list-transparent">
+                  <li>Javascript</li>
+                  <li>React</li>
+                  <li>Express</li>
+                  <li>Vercel</li>
+                  <li>Font Awesome</li>
+                  <li>GSAP</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </section>
+      <section id="contact">
+        <div className="container">
+          <h2>Interested in working together?</h2>
+          <a href="#" className="btn">
+            Say Hello <span className="sr-only">via email</span>
+            <object
+              data="envelope-regular.svg"
+              type="image/svg+xml"
+              aria-hidden="true"
+            ></object>
+          </a>
+        </div>
+      </section>
+      <footer>
+        <div className="container">
+          <p>Joshua Saunders @copy</p>
+          <a href="https://github.com/J-Saun/J-Saun">View on Github</a>
+        </div>
+      </footer>
     </main>
   );
 }
