@@ -1,10 +1,11 @@
-import { Inter } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import "./scss/globals.scss";
 import "./scss/__index.scss";
 import "normalize.css/normalize.css";
 import Navbar from "./components/navbar/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata = {
   title: "FN | Portfolio",
@@ -14,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={montserrat.className}>
         <a href="/">Skip To Main Content</a>
         <header>
           <div className="container">

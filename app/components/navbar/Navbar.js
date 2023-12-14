@@ -7,7 +7,6 @@ export default function Navbar() {
       <Link href="/">Home</Link>
       <Link href="/about">About</Link>
       <Link href="/projects">Projects</Link>
-      <Link href="/projects">Resume</Link>
       <button href="#" className="btn btn--small" aria-hidden="true">
         <object
           data="arrow-up-right-from-square-solid.svg"
