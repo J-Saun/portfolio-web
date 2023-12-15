@@ -5,8 +5,8 @@ export default async function Home() {
   const posts = await getPosts();
 
   return (
-    <main className={`main-content ${styles.home}`}>
-      <section>
+    <>
+      <section className={`main-content ${styles.home}`}>
         <div className="container">
           <Header />
           <div>
@@ -54,12 +54,6 @@ export default async function Home() {
           </a>
         </div>
       </section>
-      <footer>
-        <div className="container">
-          <p>Joshua Saunders &copy</p>
-          <a href="https://github.com/J-Saun/J-Saun">View on Github</a>
-        </div>
-      </footer>
-    </main>
+    </>
   );
 }

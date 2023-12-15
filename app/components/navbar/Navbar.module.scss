@@ -16,6 +16,10 @@
     padding-block: var(--sp-10);
   }
 
+  nav[data-mobile-visible="true"] {
+    display: block;
+  }
+
   .primaryNav ul {
     display: flex;
   }
@@ -23,6 +27,11 @@
   .homeLink {
     font-size: 2rem;
     font-weight: 700;
+  }
+
+  object {
+    width: 1.75rem;
+    height: 1.75rem;
   }
 
   @media (min-width: 50rem) {
@@ -46,6 +55,7 @@
     .primaryNav {
       order: 1;
       flex-basis: 100%;
+      display: none;
     }
     .primaryNav ul {
       flex-direction: column;

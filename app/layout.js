@@ -3,6 +3,7 @@ import "./scss/globals.scss";
 import "./scss/__index.scss";
 import "normalize.css/normalize.css";
 import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,8 +16,9 @@ export default function RootLayout({ children }) {
         <a href="/">Skip To Main Content</a>
         <Navbar />
         <main>{children}</main>
+        <Footer />
 
-        <Script src="script.js" />
+        {/* <Script src="./utils.js" /> */}
       </body>
     </html>
   );

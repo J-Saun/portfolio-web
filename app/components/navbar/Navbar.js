@@ -10,7 +10,11 @@ export default function Navbar() {
           <span className="sr-only">Portfolio Home Page</span>
         </a>
 
-        <nav id="primary-nav" className={`${styles.primaryNav}`}>
+        <nav
+          id="primary-nav"
+          className={`${styles.primaryNav}`}
+          data-mobile-visible="false"
+        >
           <ul>
             <li>
               <Link href="/" id="home-link">
@@ -25,7 +29,6 @@ export default function Navbar() {
             </li>
             <li>
               <a href="#" className="btn btn--small">
-                {/* <a href="#" className="btn btn--small"> */}
                 <object
                   aria-hidden="true"
                   data="arrow-up-right-from-square-solid.svg"
@@ -41,7 +44,7 @@ export default function Navbar() {
           id="toggle-menu-btn"
           type="button"
           aria-controls="primary-nav"
-          className={`btn btn--small`}
+          // className={`btn btn--small`}
         >
           <object
             data="bars-solid.svg"
