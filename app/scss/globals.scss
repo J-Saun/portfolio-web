@@ -215,11 +215,68 @@ abbr {
   border-radius: var(--sp-6);
   padding: var(--sp-12);
   display: inline-flex;
-  gap: var(--sp-8) 6;
+  gap: var(--sp-8);
 }
 
 .btn::hover,
 .btn:focus {
   background: var(--clr-gray-dk);
   text-decoration: none;
+}
+
+.btn--small {
+  padding: var(--sp-8);
+}
+
+// .btn object {
+//   width: 1.75rem;
+//   height: 1.75rem;
+// }
+
+.badge-list {
+  display: flex;
+  gap: var(--sp-10);
+  flex-wrap: wrap;
+  font-size: var(--fs-sm);
+
+  li {
+    background: var(--clr-gray-md);
+    padding: var(--sp-4) var(--sp-8);
+    border-radius: var(--sp-4);
+    font-size: var(--fs-sm);
+  }
+}
+
+.badge-list-purple li {
+  background: var(--clr-primary-lt);
+}
+
+// .badge-list-transparent {
+// }
+
+.badge-list-transparent li {
+  color: var(--clr-grey-dk);
+}
+
+/**
+ * Typography
+ */
+
+h1 {
+  font-size: var(--fs-h1);
+  margin-bottom: var(--sp-20);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  margin-bottom: var(--sp-20);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  margin-bottom: var(--sp-16);
+}
+
+h4 {
+  font-size: var(--fs-h4);
 }

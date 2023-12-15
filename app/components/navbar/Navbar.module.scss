@@ -1,5 +1,111 @@
 .navbar {
-  font-family: inherit;
-  display: flex;
-  gap: 30px;
+  // background-color: green;
+  background: var(--clr-bg);
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  border-bottom: var(--border-styles);
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-block: var(--sp-10);
+  }
+
+  .primaryNav ul {
+    display: flex;
+  }
+
+  .homeLink {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  @media (min-width: 50rem) {
+    background-color: yellow;
+
+    button[aria-controls="primary-nav"] {
+      display: none;
+    }
+
+    .primaryNav {
+      background-color: lightblue;
+      margin-left: auto;
+    }
+    .primaryNav ul {
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--sp-32);
+    }
+  }
+  @media (width < 50rem) {
+    background-color: green;
+
+    .container {
+      justify-content: space-between;
+    }
+    .primaryNav {
+      background-color: blue;
+      order: 1;
+      flex-basis: 100%;
+    }
+    .primaryNav ul {
+      flex-direction: column;
+    }
+    .primaryNav ul li {
+      border-top: var(--border-styles);
+      padding-block: var(--sp-12);
+    }
+  }
 }
+
+// @media (width < 50rem) {
+//   .primaryNav {
+//     // .btn button[aria-controls="primary-nav"] {
+//     //   display: none;
+//     // }
+//     background-color: green;
+//   }
+// }
+// @media (width < 50rem) {
+//   .navbar {
+//     .btn button[aria-controls="primary-nav"] {
+//       display: none;
+//     }
+//     .primary-nav {
+//       order: 1;
+//       ul {
+//         border-top: var(--border-styles);
+//         padding-block: var(--sp-12);
+//       }
+//     }
+//   }
+// }
+// }
+// .navbar {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   font-size: 2rem;
+//   .primaryNav {
+//     font-family: inherit;
+//     display: inline-flex;
+//     align-items: center;
+//     gap: 30px;
+
+//     ul {
+//       display: flex;
+//     }
+//   }
+//   .homeLink {
+//     font-size: 2rem;
+//     font-weight: 700;
+//   }
+
+// }
+
+// 134

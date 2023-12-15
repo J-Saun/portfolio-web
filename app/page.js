@@ -1,6 +1,6 @@
 import styles from "./page.module.scss";
 import { getPosts } from "@/utils";
-
+import Header from "./components/header/Header";
 export default async function Home() {
   const posts = await getPosts();
 
@@ -8,25 +8,33 @@ export default async function Home() {
     <main className={`main-content ${styles.home}`}>
       <section>
         <div className="container">
-          {" "}
-          <h1>Hello, Im Joshua.</h1>
-          <p>
-            Im a web developer, and passionate about building things for the
-            web.
-          </p>
+          <Header />
           <div>
             <h2 className="sr-only">Social Media Links</h2>
             <ul>
-              <a href="https://github.com/J-Saun/J-Saun">
-                <object data="github.svg" type="image/svg+xml"></object>
-                <span className="sr-only">Github</span>
-              </a>
-              <a href="https://www.linkedin.com/in/joshua-a-saunders/">
-                <object data="linkedin.svg" type="image/svg+xml"></object>
-                <span className="sr-only">LinkedIn</span>
-              </a>
-              <object data="envelope-regular.svg" type="image/svg+xml"></object>
-              <a href="#"></a>
+              <li>
+                <a href="https://github.com/J-Saun/J-Saun">
+                  <object data="github.svg" type="image/svg+xml" alt="" />
+                  <span className="sr-only">Github</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/joshua-a-saunders/">
+                  <object data="linkedin.svg" type="image/svg+xml" alt="" />
+                  <span className="sr-only">LinkedIn</span>
+                </a>
+              </li>
+
+              <li>
+                <a href="#" aria-label="Email">
+                  <object
+                    data="envelope-regular.svg"
+                    type="image/svg+xml"
+                    alt=""
+                    role="presentation"
+                  />
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -36,18 +44,19 @@ export default async function Home() {
         <div className="container">
           <h2>Interested in working together?</h2>
           <a href="#" className="btn">
-            Say Hello <span className="sr-only">via email</span>
+            Say Hello <span className="sr-only">Via Email</span>
             <object
               data="envelope-regular.svg"
               type="image/svg+xml"
               aria-hidden="true"
-            ></object>
+              role="presentation"
+            />
           </a>
         </div>
       </section>
       <footer>
         <div className="container">
-          <p>Joshua Saunders @copy</p>
+          <p>Joshua Saunders &copy</p>
           <a href="https://github.com/J-Saun/J-Saun">View on Github</a>
         </div>
       </footer>

@@ -3,17 +3,54 @@ import styles from "./Navbar.module.scss";
 
 export default function Navbar() {
   return (
-    <nav id="primary-nav" className={styles.navbar}>
-      <Link href="/">Home</Link>
-      <Link href="/about">About</Link>
-      <Link href="/projects">Projects</Link>
-      <button href="#" className="btn btn--small" aria-hidden="true">
-        <object
-          data="arrow-up-right-from-square-solid.svg"
-          type="image/svg+xml"
-        ></object>
-        Resume
-      </button>
-    </nav>
+    <div className={`container ${styles.navbar}`}>
+      <div className={`container ${styles.container}`}>
+        <a href="/" className={`${styles.homeLink}`}>
+          <abbr title="Joshua Saunders">JS</abbr>
+          <span className="sr-only">Portfolio Home Page</span>
+        </a>
+
+        <nav id="primary-nav" className={`${styles.primaryNav}`}>
+          <ul>
+            <li>
+              <Link href="/" id="home-link">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/about">About</Link>
+            </li>
+            <li>
+              <Link href="/projects">Projects</Link>
+            </li>
+            <li>
+              <a href="#" className="btn btn--small">
+                {/* <a href="#" className="btn btn--small"> */}
+                <object
+                  aria-hidden="true"
+                  data="arrow-up-right-from-square-solid.svg"
+                  type="image/svg+xml"
+                ></object>
+                Resume
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <button
+          id="toggle-menu-btn"
+          type="button"
+          aria-controls="primary-nav"
+          className={`btn btn--small`}
+        >
+          <object
+            data="bars-solid.svg"
+            type="image/svg+xml"
+            aria-hidden="true"
+          ></object>
+          <span className="sr-only">Toggle Navigation Menu</span>
+        </button>
+      </div>
+    </div>
   );
 }
