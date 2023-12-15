@@ -26,14 +26,11 @@
   }
 
   @media (min-width: 50rem) {
-    background-color: yellow;
-
     button[aria-controls="primary-nav"] {
       display: none;
     }
 
     .primaryNav {
-      background-color: lightblue;
       margin-left: auto;
     }
     .primaryNav ul {
@@ -43,13 +40,10 @@
     }
   }
   @media (width < 50rem) {
-    background-color: green;
-
     .container {
       justify-content: space-between;
     }
     .primaryNav {
-      background-color: blue;
       order: 1;
       flex-basis: 100%;
     }
