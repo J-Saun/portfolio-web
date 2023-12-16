@@ -28,9 +28,10 @@ export default function Navbar() {
               <Link href="/projects">Projects</Link>
             </li>
             <li>
-              <a href="#" className="btn btn--small">
+              <a href="#" className={`btn btn--small`}>
                 <object
                   aria-hidden="true"
+                  tabindex="-1"
                   data="arrow-up-right-from-square-solid.svg"
                   type="image/svg+xml"
                 ></object>
@@ -40,12 +41,7 @@ export default function Navbar() {
           </ul>
         </nav>
 
-        <button
-          id="toggle-menu-btn"
-          type="button"
-          aria-controls="primary-nav"
-          // className={`btn btn--small`}
-        >
+        <button type="button" aria-controls="primary-nav">
           <object
             data="bars-solid.svg"
             type="image/svg+xml"

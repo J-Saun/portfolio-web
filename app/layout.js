@@ -13,9 +13,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={montserrat.className}>
-        <a href="/">Skip To Main Content</a>
+        <a href="#main-content" id="skip-to-content">
+          Skip To Main Content
+        </a>
         <Navbar />
-        <main>{children}</main>
+        <main id="main-content">{children}</main>
         <Footer />
 
         {/* <Script src="./utils.js" /> */}
