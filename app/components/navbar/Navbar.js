@@ -31,7 +31,7 @@ export default function Navbar() {
               <a href="#" className={`btn btn--small`}>
                 <object
                   aria-hidden="true"
-                  tabindex="-1"
+                  tabIndex="-1"
                   data="arrow-up-right-from-square-solid.svg"
                   type="image/svg+xml"
                 ></object>

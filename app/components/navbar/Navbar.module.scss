@@ -1,5 +1,4 @@
 .navbar {
-  // background-color: green;
   background: var(--clr-bg);
   position: sticky;
   top: 0;
@@ -34,11 +33,6 @@
     background: var(--clr-primary);
   }
 
-  // object {
-  //   width: 1.75rem;
-  //   height: 1.75rem;
-  // }
-
   @media (min-width: 50rem) {
     button[aria-controls="primary-nav"] {
       display: none;
@@ -71,50 +65,3 @@
     }
   }
 }
-
-// @media (width < 50rem) {
-//   .primaryNav {
-//     // .btn button[aria-controls="primary-nav"] {
-//     //   display: none;
-//     // }
-//     background-color: green;
-//   }
-// }
-// @media (width < 50rem) {
-//   .navbar {
-//     .btn button[aria-controls="primary-nav"] {
-//       display: none;
-//     }
-//     .primary-nav {
-//       order: 1;
-//       ul {
-//         border-top: var(--border-styles);
-//         padding-block: var(--sp-12);
-//       }
-//     }
-//   }
-// }
-// }
-// .navbar {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   font-size: 2rem;
-//   .primaryNav {
-//     font-family: inherit;
-//     display: inline-flex;
-//     align-items: center;
-//     gap: 30px;
-
-//     ul {
-//       display: flex;
-//     }
-//   }
-//   .homeLink {
-//     font-size: 2rem;
-//     font-weight: 700;
-//   }
-
-// }
-
-// 134

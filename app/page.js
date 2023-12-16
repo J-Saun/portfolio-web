@@ -1,12 +1,32 @@
 import styles from "./page.module.scss";
 import { getPosts } from "@/utils";
 import Header from "./components/header/Header";
+import BadgeList from "./components/badges/BadgeList";
+
 export default async function Home() {
   const posts = await getPosts();
 
+  const aboutMe = `Hey there! I'm a coding enthusiast who's really into JavaScript and
+  React. I haven't worked in tech yet, but I'm super excited to dive
+  in. Apart from coding, you'll often find me outdoors, soaking up the
+  sun and enjoying nature. It's my way of balancing the screen time
+  and keeping things real. Even though I haven't had a tech job yet,
+  don't let that fool you. I'm all geared up to bring my A-game to the
+  tech world. Can't wait to see where this journey takes me!`;
+
+  const badges = [
+    "SCSS",
+    "React",
+    "Node.js",
+    "PHP",
+    "Netlify",
+    "Vercel",
+    "GIT",
+  ];
+
   return (
     <>
-      <section className={`main-content ${styles.home}`}>
+      <section className={`${styles.home}`}>
         <div className="container">
           <Header />
           <div>
@@ -17,7 +37,7 @@ export default async function Home() {
                   <object
                     data="github.svg"
                     type="image/svg+xml"
-                    tabindex="-1"
+                    tabIndex="-1"
                     alt=""
                   />
                   <span className="sr-only">Github</span>
@@ -28,7 +48,7 @@ export default async function Home() {
                   <object
                     data="linkedin.svg"
                     type="image/svg+xml"
-                    tabindex="-1"
+                    tabIndex="-1"
                     alt=""
                   />
                   <span className="sr-only">LinkedIn</span>
@@ -40,7 +60,7 @@ export default async function Home() {
                   <object
                     data="envelope-regular.svg"
                     type="image/svg+xml"
-                    tabindex="-1"
+                    tabIndex="-1"
                     alt=""
                     role="presentation"
                   />
@@ -53,28 +73,12 @@ export default async function Home() {
       </section>
       <section id="about">
         <div className="container">
-          <div>
-            Hey there! I'm a coding enthusiast who's really into JavaScript and
-            React. I haven't worked in tech yet, but I'm super excited to dive
-            in. Apart from coding, you'll often find me outdoors, soaking up the
-            sun and enjoying nature. It's my way of balancing the screen time
-            and keeping things real. Even though I haven't had a tech job yet,
-            don't let that fool you. I'm all geared up to bring my A-game to the
-            tech world. Can't wait to see where this journey takes me!
-          </div>
-          <div>
-            <h2>A few technologies I've been working with lately:</h2>
-            <ul className="badge-list badge-list-purple">
-              <li>Javascript</li>
-              <li>SCSS</li>
-              <li>React</li>
-              <li>Node.js</li>
-              <li>PHP</li>
-              <li>Netlify</li>
-              <li>Vercel</li>
-              <li>GIT</li>
-            </ul>
-          </div>
+          <div>{aboutMe}</div>
+          <BadgeList
+            title="A few technologies I've been working with lately:"
+            badges={badges}
+            style={"themed"}
+          />
         </div>
       </section>
       <section id="contact">
