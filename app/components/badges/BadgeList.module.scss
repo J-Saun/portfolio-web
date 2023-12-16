@@ -17,3 +17,6 @@
 .badgeList .transparent {
   color: var(--clr-gray-dk);
 }
+.badgeList .transparent li:first-of-type {
+  padding-left: 0;
+}

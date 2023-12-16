@@ -1,0 +1,12 @@
+.projectCard {
+  background-color: pink;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-gap: var(--sp-32) var(--sp-64);
+
+  .projectCard__preview {
+    // background-color: purple;
+    aspect-ratio: 1.6;
+    object-fit: cover;
+  }
+}

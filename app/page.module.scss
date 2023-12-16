@@ -227,6 +227,20 @@
 //     transform: rotate(0deg);
 //   }
 // }
-// .home {
-// background-color: lightblue;
-// }
+.home {
+  .container {
+    padding-block: calc(var(--sp-64) * 3);
+  }
+  ul {
+    // background-color: red;
+    display: flex;
+    gap: var(--sp-20);
+  }
+  li a svg {
+    fill: #123456; /* Replace with your desired color */
+  }
+}
+.home ul object {
+  fill: rgb(55, 72, 228);
+  width: 1.5rem;
+}

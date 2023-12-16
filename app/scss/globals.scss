@@ -232,27 +232,6 @@ abbr {
   width: 0.75rem;
 }
 
-.badge-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--sp-10);
-  font-size: var(--fs-sm);
-}
-.badge-list li {
-  padding: var(--sp-4) var(--sp-8);
-  border-radius: var(--sp-4);
-  background: var(--clr-gray-md);
-  font-size: var(--fs-sm);
-}
-
-.badge-list-purple li {
-  background: var(--clr-primary-lt);
-}
-
-.badge-list-transparent li {
-  color: green;
-}
-
 /**
  * Typography
  */
@@ -274,4 +253,14 @@ h3 {
 
 h4 {
   font-size: var(--fs-h4);
+}
+
+section .container {
+  padding-block: calc(var(--sp-64));
+}
+
+@media (min-width: 50rem) {
+  section .container {
+    padding-block: calc(var(--sp-64) * 1.5);
+  }
 }

@@ -4,7 +4,7 @@ import styles from "./BadgeList.module.scss";
 const BadgeList = ({ title, badges, style }) => {
   return (
     <div>
-      <h2>{title}</h2>
+      <h3>{title}</h3>
       <ul className={`${styles.badgeList}`}>
         {/* <li className={`${styles.themed}`}>Javascript</li> */}
         {badges.map((badge) => (
