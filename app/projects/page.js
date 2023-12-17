@@ -7,38 +7,38 @@ export default async function Projects() {
   console.log(posts);
 
   return (
-    <section className={styles.projects}>
-      <section id="work">
-        <div className="container">
-          <h2>Recent Work</h2>
-
-          {posts.map((post) => {
-            return (
-              <a href={`/post/${post.slug}`} key={post.id}>
-                <Card
-                  title={post.title}
-                  image={post.image}
-                  description={post.body}
-                  badges={[
-                    "Javascript",
-                    "React",
-                    "Express",
-                    "Vercel",
-                    "Font Awesome",
-                    "GSAP",
-                  ]}
-                />
-              </a>
-            );
-          })}
-        </div>
-      </section>{" "}
+    <section id="work" className={styles.projects}>
+      <div className="container">
+        <h2>Recent Projects</h2>
+        {posts.map((post) => {
+          return (
+            <a href={`/posts/${post.slug}`} key={post._id}>
+              <Card
+                title={post.title}
+                image={post.image}
+                author={post.author}
+                author_img={post.author_img}
+                createdAt={new Date(post._createdAt).toLocaleDateString()}
+                description={post.body}
+                badges={[
+                  "Javascript",
+                  "React",
+                  "Express",
+                  "Vercel",
+                  "Font Awesome",
+                  "GSAP",
+                ]}
+              />
+            </a>
+          );
+        })}
+      </div>
     </section>
   );
 }
+// 146
 
-{
-  /* <div className="project-card">
+/* <div className="project-card">
 <div className="project-card-preview">
   <img src=""></img>
   <div className="project-card__desc">
@@ -56,7 +56,6 @@ export default async function Projects() {
   </div>
 </div>
 </div> */
-}
 
 // {posts.map((post) => (
 //   // <a href={`/post/${post.slug}`} key={post.id}>
