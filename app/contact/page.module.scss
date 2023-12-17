@@ -7,5 +7,7 @@
     border: var(--border-styles);
     border-radius: var(--sp-20);
     background-color: var(--clr-bg);
+    margin-bottom: calc(var(--sp-16) * -1);
+    position: relative;
   }
 }

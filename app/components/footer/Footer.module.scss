@@ -1,0 +1,12 @@
+.footer {
+  color: var(--clr-gray-dk);
+  background-color: var(--clr-gray-lt);
+  border-top: var(--border-styles);
+  font-size: var(--fs-sm);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding-block: var(--sp-48) var(--sp-24);
+  }
+}

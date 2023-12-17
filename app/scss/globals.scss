@@ -228,10 +228,13 @@ abbr {
 .btn--small {
   padding: var(--sp-8);
 }
-.btn--small object {
+.btn--small img {
   width: 0.75rem;
 }
-
+.icon {
+  width: 12rem;
+  height: 1rem;
+}
 /**
  * Typography
  */

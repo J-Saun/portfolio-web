@@ -3,7 +3,6 @@ import "./scss/globals.scss";
 import "./scss/__index.scss";
 import "normalize.css/normalize.css";
 import Navbar from "./components/navbar/Navbar";
-import Footer from "./components/footer/Footer";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,9 +17,8 @@ export default function RootLayout({ children }) {
         </a>
         <Navbar />
         <main id="main-content">{children}</main>
-        <Footer />
 
-        {/* <Script src="./utils.js" /> */}
+        <Script src={"/script.js"} strategy="lazyOnload" />
       </body>
     </html>
   );
