@@ -15,10 +15,8 @@ export async function getPosts() {
         _createdAt,
         title,
         'author': author->name,
-        'author_img': author->image.asset->url,
         'image': mainImage.asset->url,
         'slug': slug.current,
-
     }`
   );
 
@@ -37,7 +35,7 @@ export async function getPostData(slug) {
         title,
         'image': mainImage.asset->url,
         'slug': slug.current,
-        "content": body
+        "content": body[].children[].text
     }`,
     { slug }
   );

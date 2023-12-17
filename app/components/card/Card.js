@@ -1,23 +1,17 @@
-import { PortableText } from "@portabletext/react";
-
 import styles from "./Card.module.scss";
 import BadgeList from "../badges/BadgeList";
 
 const Card = (props) => {
-  const { image, title, author, author_img, createdAt, content, badges } =
-    props;
+  const { image, title, description, badges } = props;
   return (
     <div className={styles.projectCard}>
       <div className={styles.projectCard__preview}>
         <img src={image} alt="" />
       </div>
-      <div className={styles.projectCard__desc}>
+      <div className={styles.projectCard__description}>
         <h3>{title}</h3>
-        <PortableText value={content} />
+        <p>{description}</p>
         <BadgeList badges={badges} style="transparent" />
-        <img src={author_img} />
-        <p>{author}</p>
-        <p>{createdAt}</p>
       </div>
     </div>
     // <div className={`project-card ${isDarkMode ? "dark" : "light"}`}>
