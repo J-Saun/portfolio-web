@@ -9,4 +9,10 @@
     justify-content: space-between;
     padding-block: var(--sp-48) var(--sp-24);
   }
+  p {
+    &::after {
+      content: "\00A9";
+      margin-left: 0.5rem;
+    }
+  }
 }
