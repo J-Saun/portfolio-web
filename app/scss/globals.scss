@@ -224,14 +224,16 @@ abbr {
   background: var(--clr-gray-dk);
   text-decoration: none;
 }
-
 .btn--small {
   padding: var(--sp-8);
 }
-.btn--small object {
-  width: 0.75rem;
+// .btn--small .icon {
+//   width: 0.75rem;
+// }
+.icon {
+  width: 30px;
+  height: auto;
 }
-
 /**
  * Typography
  */
