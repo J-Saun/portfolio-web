@@ -18,7 +18,6 @@ export async function getPosts() {
         'author_img': author->image.asset->url,
         'image': mainImage.asset->url,
         'slug': slug.current,
-
     }`
   );
 
