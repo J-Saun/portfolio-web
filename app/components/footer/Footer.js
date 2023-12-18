@@ -1,7 +1,9 @@
+import styles from "./Footer.module.scss";
+
 const Footer = () => {
   return (
-    <footer>
-      <div className="container">
+    <footer className={styles.footer}>
+      <div className={`container ${styles.container}`}>
         <p>Joshua Saunders &copy</p>
         <a href="https://github.com/J-Saun/J-Saun">View on Github</a>
       </div>

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import styles from "./Navbar.module.scss";
-import { ArrowUpRightSVG, BarsSolidSVG, XSVG } from "../elements/buttons/icons";
 
 export default function Navbar() {
   return (
@@ -30,16 +29,19 @@ export default function Navbar() {
             </li>
             <li>
               <a href="#" className={`btn btn--small`}>
-                <ArrowUpRightSVG className={`btn btn--small ${styles.icon}`} />
+                <img
+                  tabIndex="-1"
+                  src={"arrow-up-right-from-square-solid.svg"}
+                  aria-hidden="true"
+                />
                 Resume
               </a>
             </li>
           </ul>
         </nav>
 
-        <button className="" type="button" aria-controls="primary-nav">
-          {/* <img src="bars-solid.svg" aria-hidden="true" /> */}
-          <BarsSolidSVG className={`${styles.icon}`} />
+        <button type="button" aria-controls="primary-nav">
+          <img src={"bars-solid.svg"} aria-hidden="true" />
           <span className="sr-only">Toggle Navigation Menu</span>
         </button>
       </div>
