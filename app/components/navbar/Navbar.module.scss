@@ -32,7 +32,22 @@
     color: var(--clr-primary-text);
     background: var(--clr-primary);
   }
+  .icon {
+    fill: var(--clr-primary-text);
+    width: 0.75rem;
+    height: auto;
+    padding: 0;
+  }
 
+  button {
+    border: none;
+  }
+
+  button .icon {
+    fill: var(--clr-primary);
+    width: var(--fs-h2);
+    height: auto;
+  }
   @media (min-width: 50rem) {
     button[aria-controls="primary-nav"] {
       display: none;
