@@ -10,4 +10,8 @@
     margin-bottom: calc(var(--sp-16) * -1);
     position: relative;
   }
+  .icon {
+    width: 1rem;
+    fill: var(--clr-primary-text);
+  }
 }

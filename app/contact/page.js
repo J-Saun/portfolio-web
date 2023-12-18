@@ -1,3 +1,4 @@
+import { EnvelopeSVG } from "../components/elements/buttons/icons";
 import styles from "./page.module.scss";
 
 const Contact = () => {
@@ -7,12 +8,7 @@ const Contact = () => {
         <h2>Interested in working together?</h2>
         <a href="#" className="btn">
           Say Hello <span className="sr-only">Via Email</span>
-          <img
-            className="icon"
-            src={"envelope-regular.svg"}
-            aria-hidden="true"
-            role="presentation"
-          />
+          <EnvelopeSVG className={`${styles.icon}`} />
         </a>
       </div>
     </section>
