@@ -1,10 +1,10 @@
 import styles from "./projects.module.scss";
-import { getPosts } from "@/utils";
+import { getPosts } from "@/utils/utils";
 import Card from "../components/card/Card";
 
 export default async function Projects() {
   const posts = await getPosts();
-  console.log(posts);
+  // console.log(posts);
 
   return (
     <section className={styles.projects}>
